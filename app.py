@@ -1,5 +1,3 @@
-(venv) root@ubuntu:/home/lichpi/small_site# nano app.py
-  GNU nano 8.1                                                                                                                app.py
 from flask import Flask, request, jsonify, render_template
 import sqlite3
 
