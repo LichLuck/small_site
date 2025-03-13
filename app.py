@@ -27,14 +27,14 @@ def hello():
 def create_item():
     data = request.get_json()
     name = data.get('name')
-    location = data.get('location')
+    location = data.get('lcation')
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('INSERT INTO items (name, location) VALUES (?, ?)', (name, location))
     conn.commit()
     item_id = cursor.lastrowid
     conn.close()
-    return jsonify({'id': item_id, 'name': name, 'location': location}), 201
+    return jsonify({'id': item_id, 'name': name, 'lcation': location}), 201
 
 @app.route('/items', methods=['GET'])
 def get_items():
