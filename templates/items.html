@@ -12,6 +12,7 @@
     </style>
 </head>
 <body>
+    <input id="articleFS" type="text"/><button onclick="searchItem()">Шукати!</button>
     <h1>Items List</h1>
     <table>
         <tr>
@@ -55,6 +56,11 @@
                 alert("Failed to add item");
             }
         });
+        function searchItem(){
+            article = document.getElementById(articleFS).value;
+            print(article)
+            document.getElementById(article).scrollIntoView({ behavior: "instant", block: "end" });
+        }
     </script>
 </body>
 </html>
